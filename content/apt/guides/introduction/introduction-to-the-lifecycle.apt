@@ -47,8 +47,8 @@ Introduction to the Build Lifecycle
   Maven is based around the central concept of a build lifecycle. What this means is that the process for building
   and distributing a particular artifact (project) is clearly defined.
 
-  For the person building a project, this means that it is only necessary to learn a small set of commands to build any
-  Maven project, and the {{{./introduction-to-the-pom.html}POM}} will ensure they get the results they desired.
+  The person building a project only needs to to learn a small set of commands to build any
+  Maven project The {{{./introduction-to-the-pom.html}POM}} ensures they get the results they desired.
 
   There are three built-in build lifecycles: default, clean and site. The <<<default>>> lifecycle handles your project
   deployment, the <<<clean>>> lifecycle handles project cleaning, while the <<<site>>> lifecycle handles the creation of your
@@ -59,7 +59,7 @@ Introduction to the Build Lifecycle
   Each of these build lifecycles is defined by a different list of build phases, wherein a build phase represents a
   stage in the lifecycle.
 
-  For example, the default lifecycle comprises of the following phases (for a complete list of the lifecycle phases, refer
+  For example, the default lifecycle comprises the following phases (for a complete list of the lifecycle phases, refer
   to the {{{Lifecycle_Reference}Lifecycle Reference}}):
 
     * <<<validate>>> - validate the project is correct and all necessary information is available
@@ -112,7 +112,7 @@ mvn clean deploy
 
 **  {A Build Phase is Made Up of Plugin Goals}
 
-  However, even though a build phase is responsible for a specific step in the build lifecycle, the manner in which it
+  Even though a build phase is responsible for a specific step in the build lifecycle, the manner in which it
   carries out those responsibilities may vary. And this is done by declaring the plugin goals bound to those build phases.
 
   A plugin goal represents a specific task (finer than a build phase) which contributes to the building and managing of a
@@ -220,9 +220,9 @@ mvn clean dependency:copy-dependencies package
   first, followed by those configured in the POM. Note that you can use the <<<\<executions\>>>> element to gain more
   control over the order of particular goals.
 
-  For example, the Modello plugin binds by default its goal <<<modello:java>>> to the <<<generate-sources>>> phase (Note: The
-  <<<modello:java>>> goal generates Java source codes). So to use the Modello plugin and have it generate sources from
-  a model and incorporate that into the build, you would add the following to your POM in the <<<\<plugins\>>>> section of
+  For example, the Modello plugin binds by default its goal <<<modello:java>>> to the <<<generate-sources>>> phase. (Note: The
+  <<<modello:java>>> goal generates Java source code.) To use the Modello plugin and have it generate sources from
+  a model and incorporate that into the build, you add the following to your POM in the <<<\<plugins\>>>> section of
   <<<\<build\>>>>:
 
 ----
